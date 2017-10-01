@@ -1,6 +1,7 @@
 ﻿using System;
 using Abstract_Factory;
 using Adapter;
+using Bridge;
 
 namespace Design_Patterns
 {
@@ -8,8 +9,23 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
-            AbstractFactory();
-            Adapter();
+            //AbstractFactory();
+            //Adapter();
+            Bridge();
+        }
+
+        private static void Bridge()
+        {
+            var song = new Song("jimikki kammal", "Velipadinte pusthakam song", "Photo is here ***** ");
+            var movie = new Movie("Velipadinte pusthakam", "Mohanlal and Lal jose for the first time together", "Photo ***** ");
+            var longView = new LongView();
+            Console.WriteLine("Displaying on a long view");
+            longView.DisplayOnMonitor(song, movie);
+
+            var shortView = new ShortView();
+            Console.WriteLine("Displaying on a short view");
+            shortView.DisplayOnMonitor(song, movie);
+
         }
 
         private static void Adapter()

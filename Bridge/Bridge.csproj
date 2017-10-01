@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{69640A55-8B0A-4338-A7C2-E0F34C4E029E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Design_Patterns</RootNamespace>
-    <AssemblyName>Design Patterns</AssemblyName>
+    <ProjectGuid>{BEFE5758-6D09-4BD5-8312-157199067B88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bridge</RootNamespace>
+    <AssemblyName>Bridge</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,25 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="IMediaType.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="LongView.cs" />
+    <Compile Include="Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Abstract Factory\Abstract Factory.csproj">
-      <Project>{6addd5f9-b722-48a0-be2c-013f6b96503a}</Project>
-      <Name>Abstract Factory</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Adapter\Adapter.csproj">
-      <Project>{2aff2477-6281-42f3-8fee-81c5b9d16785}</Project>
-      <Name>Adapter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Bridge\Bridge.csproj">
-      <Project>{befe5758-6d09-4bd5-8312-157199067b88}</Project>
-      <Name>Bridge</Name>
-    </ProjectReference>
+    <Compile Include="ShortView.cs" />
+    <Compile Include="Song.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
