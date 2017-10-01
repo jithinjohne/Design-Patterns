@@ -2,6 +2,7 @@
 using Abstract_Factory;
 using Adapter;
 using Bridge;
+using Builder;
 
 namespace Design_Patterns
 {
@@ -11,7 +12,17 @@ namespace Design_Patterns
         {
             //AbstractFactory();
             //Adapter();
-            Bridge();
+            //Bridge();
+            Builder();
+        }
+
+        private static void Builder()
+        {
+            var engineer = new Engineer();
+            Console.WriteLine("****** Creating household robot *******");
+            engineer.CreateRobot(new HouseholdRobotBuilder());
+            Console.WriteLine($"{Environment.NewLine}****** Creating military robot *******");
+            engineer.CreateRobot(new MilitaryRobotBuilder());
         }
 
         private static void Bridge()
