@@ -4,6 +4,7 @@ using Adapter;
 using Bridge;
 using Builder;
 using ChainOfResponsibility;
+using Command;
 
 namespace Design_Patterns
 {
@@ -15,7 +16,27 @@ namespace Design_Patterns
             //Adapter();
             //Bridge();
             //Builder();
-            ChainOfResponsibility();
+            //ChainOfResponsibility();
+            Command();
+        }
+
+        private static void Command()
+        {
+            Console.WriteLine("Testing light remote controller");
+            var lightRemoteController = new LightRemoteController();
+
+            lightRemoteController.PressRightArrow();
+            lightRemoteController.PressUpArrow();
+            lightRemoteController.PressDownArrow();
+            lightRemoteController.PressLeftArrow();
+
+
+            Console.WriteLine("Testing fan remote controller");
+            var fanRemoteController = new FanRemoteController();
+            fanRemoteController.PressRightArrow();
+            fanRemoteController.PressUpArrow();
+            fanRemoteController.PressDownArrow();
+            fanRemoteController.PressLeftArrow();
         }
 
         private static void ChainOfResponsibility()
