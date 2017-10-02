@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.csproj", "{F5C2D18B-88B5-474D-8B00-65FC276E3D54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{93625F71-3C49-46FE-BA4D-A6E61BDEB755}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F5C2D18B-88B5-474D-8B00-65FC276E3D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5C2D18B-88B5-474D-8B00-65FC276E3D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5C2D18B-88B5-474D-8B00-65FC276E3D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93625F71-3C49-46FE-BA4D-A6E61BDEB755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93625F71-3C49-46FE-BA4D-A6E61BDEB755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93625F71-3C49-46FE-BA4D-A6E61BDEB755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93625F71-3C49-46FE-BA4D-A6E61BDEB755}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

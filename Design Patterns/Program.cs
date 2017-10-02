@@ -3,6 +3,7 @@ using Abstract_Factory;
 using Adapter;
 using Bridge;
 using Builder;
+using ChainOfResponsibility;
 
 namespace Design_Patterns
 {
@@ -13,7 +14,23 @@ namespace Design_Patterns
             //AbstractFactory();
             //Adapter();
             //Bridge();
-            Builder();
+            //Builder();
+            ChainOfResponsibility();
+        }
+
+        private static void ChainOfResponsibility()
+        {
+            var _1rupeeHandler = new _1RupeeHandler(null);
+            var _10rupeeHandler = new _10RupeeHandler(_1rupeeHandler);
+            var _20rupeeHandler = new _20RupeeHandler(_10rupeeHandler);
+            var _50rupeeHandler = new _50RupeeHanlder(_20rupeeHandler);
+            var _100rupeeHandler = new _100RupeeHandler(_50rupeeHandler);
+
+            Console.WriteLine("Disposing 583.......");
+            _100rupeeHandler.Handle(583);
+
+            Console.WriteLine($"{Environment.NewLine}Disposing 255....");
+            _100rupeeHandler.Handle(255);
         }
 
         private static void Builder()
