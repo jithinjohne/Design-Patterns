@@ -5,6 +5,7 @@ using Bridge;
 using Builder;
 using ChainOfResponsibility;
 using Command;
+using Observer;
 
 namespace Design_Patterns
 {
@@ -17,7 +18,18 @@ namespace Design_Patterns
             //Bridge();
             //Builder();
             //ChainOfResponsibility();
-            Command();
+            //Command();
+            Observer();
+        }
+
+        private static void Observer()
+        {
+            var weatherStation = new WeatherStation();
+            weatherStation.Add(new TV());
+            weatherStation.Add(new CellPhone());
+            weatherStation.SetCurrentWeather(new WeatherPayload(10.5m));
+            weatherStation.SetCurrentWeather(new WeatherPayload(10.4m));
+            weatherStation.SetCurrentWeather(new WeatherPayload(10.6m));
         }
 
         private static void Command()
